@@ -1,0 +1,40 @@
+name: Gatling Performance Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Maven
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: 8
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/*.pom') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Build and Test
+        run: mvn --no-transfer-progress -B clean test
+
+      - name: Run Gatling Simulation
+        run: mvn gatling:test -Dgatling.simulationClass=demoStoreApp.SimulationDemoStoreApp
+
+      - name: Archive Gatling Reports
+        uses: actions/upload-artifact@v2
+        with:
+          name: gatling-reports
+          path: target/gatling
