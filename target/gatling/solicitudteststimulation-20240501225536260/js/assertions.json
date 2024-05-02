@@ -1,0 +1,10 @@
+{
+  "simulation": "APITestSolicitudRecogida.SolicitudTestStimulation",
+  "simulationId": "solicitudteststimulation",
+  "start": 1714604136260,
+  "description": "",
+  "scenarios": ["Solicitar recogida"],
+  "assertions": [
+
+  ]
+}
