@@ -81,8 +81,9 @@ https://github.com/CristianHdezZ/Test-Load-Gatling-Coordinadora/actions/runs/891
 
 
 
-## Reporter
-https://github.com/CristianHdezZ/Test-Load-Gatling-Coordinadora/actions/runs/8931792647/artifacts/1469006922
+## Reporte
+
+[Reporte de ejecución de la prueba](https://github.com/CristianHdezZ/Test-Load-Gatling-Coordinadora/actions/runs/8931792647/artifacts/1469006922)
 
 ---
 
