@@ -1,7 +1,7 @@
 # Simulación de Pruebas de Rendimiento con Gatling, Maven y Scala
 
 Este repositorio contiene una simulación de pruebas de rendimiento utilizando Gatling, 
-Maven y Scala para la API "solicitud-recogida". La simulación representa una carga basica de usuarios que incluye el consumo al servicio para solicitar una recogida exitosa(Cuando fecha y parametros requeridos) y una fallida (Cuando no fecha y los parametros requeridos).
+Maven y Scala para la API "solicitud-recogida". La simulación representa una carga basica de usuarios que incluye el consumo al servicio para solicitar una recogida exitosa(cuando se cumple con fecha y parametros requeridos) y una fallida (Cuando no se cumple con fecha y los parametros requeridos).
 
 
 ## Requisitos
