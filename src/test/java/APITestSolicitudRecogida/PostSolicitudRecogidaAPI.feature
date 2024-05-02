@@ -24,3 +24,13 @@ Feature: Post API Solicitud de Recogida distintos escenarios de pruebas
     * def expectedJson = { "isError": false,"data": { "id_recogida": { "idRecogida": "#ignore", "error": false, "message": "Solicitud recogida programada exitosamente"}},"timestamp": "#ignore","id": "#string"}
     And match response == expectedJson
     And print response
+
+  @SolicitudRecogidaFechaInvalida
+  Scenario: Solicitud de Recogida fallida, ingresando una fecha futura fuera de los 5 días hábiles siguientes
+    Given request bodyRequestInput
+    * set bodyRequestInput.fechaRecogida = ""+currentDate.plusDays(10)
+    When method post
+    Then status 200
+    * def expectedJson = {"isError": true,"data": {"message": "#regex .*, no debe ser mayor a la fecha:.*","idRecogidaAnterior": "#regex .*, no debe ser mayor a la fecha.*","recogida_anterior": true},"timestamp": "#ignore","id": "#string"}
+    And match response == expectedJson
+    And print response

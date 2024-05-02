@@ -31,7 +31,7 @@ jobs:
         run: mvn --no-transfer-progress -B clean test
 
       - name: Run Gatling Simulation
-        run: mvn gatling:test -Dgatling.simulationClass=APITestSolicitudRecogida.SolicitudTestStimulation
+        run: mvn clean test-compile gatling:test
 
       - name: Archive Gatling Reports
         uses: actions/upload-artifact@v2
