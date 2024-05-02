@@ -13,6 +13,6 @@ class SolicitudTestStimulation extends Simulation {
 
   val solicitarRecogida: ScenarioBuilder = scenario("Solicitar recogida").exec(karateFeature("classpath:APITestSolicitudRecogida/PostSolicitudRecogidaAPI.feature"))
 
-  setUp(solicitarRecogida.inject(rampUsers(1500) during(600 seconds)).protocols(protocol))
+  setUp(solicitarRecogida.inject(rampUsers(1200) during(600 seconds)).protocols(protocol))
 
 }
