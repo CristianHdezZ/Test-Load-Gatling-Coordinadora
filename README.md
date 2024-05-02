@@ -79,6 +79,12 @@ mvn gatling:test -Dgatling.simulationClass=APITestSolicitudRecogida.SolicitudTes
 https://github.com/CristianHdezZ/Test-Load-Gatling-Coordinadora/actions/runs/8919780411
 ```
 
+
+
+## Reporter
+https://github.com/CristianHdezZ/Test-Load-Gatling-Coordinadora/actions/runs/8931792647/artifacts/1469006922
+
 ---
+
 
 **Firma:** Cristian Hernandez Zabala 
