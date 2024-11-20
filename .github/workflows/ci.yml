@@ -36,5 +36,5 @@ jobs:
       - name: Archive Gatling Reports
         uses: actions/upload-artifact@v4
         with:
-          name: gatling-reports
+          name: gatling-report
           path: target/gatling
